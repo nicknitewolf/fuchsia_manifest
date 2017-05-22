@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="github"
+           fetch=".." />
+
+  <remote  name="private"
+           fetch="ssh://git@github.com" />
+
+  <remote  name="fuchsia"
+           fetch="https://fuchsia.googlesource.com"
+           review="fuchsia-review.googlesource.com"
+           revision="master" />
+
+  <default revision="refs/heads/master"
+           remote="github"
+           sync-c="true"
+           sync-j="4" />
+
+  <!-- Fuchsia Projects -->
+
+  <project path="apps/sysui" name="sysui" remote="fuchsia" />
+  <project path="apps/modules/calendar" name="modules/calendar" remote="fuchsia" />
+  <project path="apps/modules/chat" name="modules/chat" remote="fuchsia" />
+  <project path="apps/modules/common" name="modules/common" remote="fuchsia" />
+  <project path="apps/modules/contacts" name="modules/contacts" remote="fuchsia" />
+  <project path="apps/modules/dashboard" name="modules/dashboard" remote="fuchsia" />
+  <project path="apps/modules/email" name="modules/email" remote="fuchsia" />
+  <project path="apps/modules/music" name="modules/music" remote="fuchsia" />
+  <project path="lib/widgets" name="widgets" remote="fuchsia" />
+  <project path="third_party/dart-pkg" name="third_party/dart-pkg" remote="fuchsia" />
+
+</manifest>

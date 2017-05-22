@@ -1,0 +1,36 @@
+Fuchsia (Armadillo)
+===================
+
+Getting Started
+---------------
+
+To get started with Fuchsia for Android, you'll need to get
+familiar with [Git and Repo](http://source.android.com/source/using-repo.html).
+
+To initialize your local repository using the Fuchsia (Armadillo) trees, use a command like this:
+
+    repo init -u git://github.com/nicknitewolf/fuchsia_manifest.git -b master
+
+Then to sync up:
+
+    repo sync
+
+Getting Started
+---------------
+
+1. Establish a build environment
+```
+git clone https://github.com/flutter/flutter.git
+export PATH=`pwd`/flutter/bin:$PATH
+flutter doctor
+```
+2. In your initialized local repository
+```
+cd apps/sysui/armadillo
+```
+3. Start building!
+```
+flutter build apk --release
+```
+
+The output of the apk would be at android/app/build/outputs/apk/app-release.apk
